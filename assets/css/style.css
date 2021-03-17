@@ -22,13 +22,19 @@ html, body{
     --hack: Hack, monospace;
 }
 
-/* NAVIGATION */
+/* ====== Navigation ======= */
 
-.navbar{
-    font-family: var(--hack) !important;
-    box-shadow: var(--box-shadow) !important;
+#menu-bar{
+    font-family: var(--hack);
+    box-shadow: var(--box-shadow);
 }
 
-.navbar a:hover{
-    color: var(--primary-color2) !important;
+#menu-bar a:hover{
+    color: var(--primary-color2);
+}
+
+.banner{
+    width: 100%;
+    height: 100%;
+    align-content: center;
 }
