@@ -22,14 +22,12 @@ html, body{
     --hack: Hack, monospace;
 }
 
-/* HEADER */
+/* NAVIGATION */
 
-.navigation.main-menu.navbar{
-    padding: 1rem 20rem;
+.navbar a{
+    font-family: var(--hack) !important;
 }
 
-.navigation.main-menu.navbar.navbar-brand {
-    font-family: var(--hack);
-    color: var(--primary-color2);
-    padding: 0 2rem 0 5rem;
+.navbar a:hover{
+    color: var(--primary-color2) !important;
 }
