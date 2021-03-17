@@ -24,8 +24,9 @@ html, body{
 
 /* NAVIGATION */
 
-.navbar a{
+.navbar{
     font-family: var(--hack) !important;
+    box-shadow: var(--box-shadow) !important;
 }
 
 .navbar a:hover{
