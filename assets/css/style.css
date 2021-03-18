@@ -26,6 +26,8 @@ html, body{
 /* ====== Navigation ======= */
 
 #menu-bar{
+    position: absolute;
+    width: 100%;
     font-family: var(--hack);
     box-shadow: var(--box-shadow);
 }
@@ -35,9 +37,7 @@ html, body{
     background-image: var(--gradient-color);
     background-size: 100%;
     -webkit-background-clip: text;
-    -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
 }
 
 #menu-bar .active a{
@@ -45,17 +45,37 @@ html, body{
     background-image: var(--gradient-color);
     background-size: 100%;
     -webkit-background-clip: text;
-    -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
 }
 
 #menu-bar span{
     color: var(--title-color);
 }
 
-.banner{
-    width: 100%;
+/* ======= Hero banner ======= */
+
+#hero{
     height: 100%;
-    align-content: center;
+    position: relative;
+}
+
+#hero .jumbotron{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#hero h1{
+    font-family: var(--hack);
+}
+
+#hero .jumbotron h5{
+    font-family: var(--hack);
+    font-size: 12pt;
+    color: dimgray;
+}
+
+#hero .col-lg-4 p{
+    padding-top: 5rem;
+    padding-left: 10rem;
 }
