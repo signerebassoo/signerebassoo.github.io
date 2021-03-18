@@ -56,12 +56,14 @@ html, body{
 
 #hero{
     height: 100%;
+    width: 100%;
     position: relative;
 }
 
 #hero .jumbotron{
     position: absolute;
     top: 50%;
+    width: 100%;
     transform: translate(0, -50%);
 }
 
