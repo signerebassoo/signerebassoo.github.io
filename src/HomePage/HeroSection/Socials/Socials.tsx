@@ -3,7 +3,7 @@ import { AiFillLinkedin, AiFillGithub, AiFillTwitterCircle } from 'react-icons/a
 
 export default function Socials() {
   return (
-    <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600'>
+    <div className='sm:text-5xl text-4xl flex justify-center gap-16 py-3 text-gray-600'>
       <AiFillLinkedin />
       <AiFillGithub />
       <AiFillTwitterCircle />
