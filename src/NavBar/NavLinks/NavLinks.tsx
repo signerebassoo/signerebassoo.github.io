@@ -7,7 +7,7 @@ export default function NavLinks() {
       <ul className='flex items-center'>
         <li>
           <NavButton link={'/'} name={'Resume'} />
-          <NavButton link={'/contact'} name={'Contact'} />
+          <NavButton link={'mailto:signe.rebassoo@gmail.com'} name={'Contact'} />
         </li>
       </ul>
     </nav>
