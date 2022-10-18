@@ -1,5 +1,5 @@
-import React, { MouseEventHandler, useState } from 'react';
-import { AiOutlineMenu } from 'react-icons/ai';
+import React, { useState } from 'react';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { NavItem } from '../NavBar';
 
 interface MobileNavMenuProps {
@@ -7,40 +7,27 @@ interface MobileNavMenuProps {
 }
 
 export default function MobileNavMenu(props: MobileNavMenuProps) {
-  const [mobileMenuIsShown, setIsMobileMenuShown] = useState(false);
+  const [mobileMenu, setMobileMenuShown] = useState(false);
   const toggleMobileMenu = () => {
-    setIsMobileMenuShown(state => !state);
+    setMobileMenuShown(!mobileMenu);
   }
 
   return (
     <>
-      <NavBurger onClick={toggleMobileMenu} />
-      {mobileMenuIsShown && 
-      // Fixme: Remove `hidden` to carry on work
-        <div className='absolute hidden'>
-          <ul>
-            {props.navItems.map(
-              item => <li><MobileNavButton label={item.label} link={item.link} /></li>
-            )}
-          </ul>
-        </div>
+      <div className='md:hidden flex items-center'>
+        <button className='text-xl z-10' onClick={toggleMobileMenu}>
+          {!mobileMenu ? <AiOutlineMenu /> : <AiOutlineClose className='text-white' />}
+        </button>
+      </div>
+      {mobileMenu && 
+        <ul className='absolute top-0 left-0 w-full h-screen bg-zinc-800 text-white text-2xl font-medium flex flex-col justify-center items-center'>
+          {props.navItems.map(
+            item => <MobileNavButton label={item.label} link={item.link} />
+          )}
+        </ul>
       }
     </>
   );
-}
-
-interface NavBurgerProps {
-  onClick: MouseEventHandler<HTMLButtonElement>
-}
-
-function NavBurger(props: NavBurgerProps) {
-  return (
-    <div className='md:hidden flex items-center'>
-      <button className='text-xl' onClick={props.onClick}>
-        <AiOutlineMenu />
-      </button>
-    </div>
-  )
 }
 
 interface MobileNavButtonProps {
@@ -50,6 +37,8 @@ interface MobileNavButtonProps {
 
 function MobileNavButton(props: MobileNavButtonProps) {
   return (
-    <a href={props.link} className="block text-md px-2 py-4 hover:bg-teal-500 hover:text-white transition duration-300">{props.label}</a>
+    <li className='block hover:text-3xl px-2 pt-4 py-3 hover:text-teal-500 text-white transition duration-300'>
+      <a href={props.link}>{props.label}</a>
+    </li>
   )
 }

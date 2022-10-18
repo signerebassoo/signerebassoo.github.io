@@ -9,7 +9,7 @@ export default function HeroSection() {
         <HeroText />
         <Socials />
       </div>
-      <div className='relative overflow-hidden p-10 flex justify-center'>
+      <div className='p-10 flex justify-center'>
         <img src={avatar} alt='avatar' className='py-2 w-80 h-80 object-contain'></img>
       </div>
     </div>
