@@ -37,7 +37,7 @@ interface MobileNavButtonProps {
 
 function MobileNavButton(props: MobileNavButtonProps) {
   return (
-    <li className='block hover:text-3xl px-2 pt-4 py-3 hover:text-teal-500 text-white transition duration-300'>
+    <li className='block px-2 pt-4 py-3 text-white hover:text-teal-500 hover:text-3xl transition duration-500'>
       <a href={props.link}>{props.label}</a>
     </li>
   )

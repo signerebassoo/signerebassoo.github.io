@@ -4,9 +4,20 @@ import { AiFillLinkedin, AiFillGithub, AiFillTwitterCircle } from 'react-icons/a
 export default function Socials() {
   return (
     <div className='sm:text-5xl text-4xl flex justify-center gap-16 py-3 text-zinc-600'>
-      <a href='https://www.linkedin.com/in/signe-rebassoo/' target="_blank" rel="noopener noreferrer"><AiFillLinkedin /></a>
-      <a href='https://github.com/signerebassoo' target="_blank" rel="noopener noreferrer"><AiFillGithub /></a>
-      <a href='/'><AiFillTwitterCircle /></a>
+      <SocialItem icon={<AiFillLinkedin />} link={'https://www.linkedin.com/in/signe-rebassoo/'} />
+      <SocialItem icon={<AiFillGithub />} link={'https://github.com/signerebassoo'} />
+      <SocialItem icon={<AiFillTwitterCircle />} link={'#twitter'} />
     </div>
   );
+}
+
+interface SocialItemProps {
+  icon: JSX.Element
+  link: string
+}
+
+function SocialItem(props: SocialItemProps) {
+  return (
+    <a href={props.link} className='hover:text-zinc-500 transition duration-500' target="_blank" rel="noopener noreferrer">{props.icon}</a>
+  )
 }
