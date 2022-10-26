@@ -11,7 +11,7 @@ export default function NavMenu(props: NavMenuProps) {
     <nav>
       <ul className='md:flex hidden items-center'>
         {props.navItems.map(
-          item => <li><NavButton label={item.label} link={item.link} /></li>
+          item => <NavButton label={item.label} link={item.link} />
         )}
       </ul>
     </nav>
