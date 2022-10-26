@@ -32,7 +32,7 @@ interface CTAButtonProps {
 
 function CTAButton(props: CTAButtonProps) {
   return (
-    <div className='flex justify-center py-3'>
+    <div className='flex justify-center pt-3 pb-4'>
       <div className='bg-gradient-to-br from-teal-500 to-cyan-500 text-white sm:text-lg text-center w-fit px-4 pt-2 pb-1 rounded-lg shadow-lg'>
         <a href={props.link}>{props.label}</a>
       </div>
