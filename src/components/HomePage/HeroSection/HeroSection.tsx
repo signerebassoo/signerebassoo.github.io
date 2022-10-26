@@ -10,7 +10,7 @@ export default function HeroSection() {
         <Socials />
       </div>
       <div className='px-10 flex justify-center py-14'>
-        <img src={avatar} alt='avatar' className='w-72 h-72 object-contain rounded-full'></img>
+        <img src={avatar} alt='avatar' className='sm:w-72 sm:h-72 w-64 h-64 object-contain rounded-full'></img>
       </div>
     </div>
   );
